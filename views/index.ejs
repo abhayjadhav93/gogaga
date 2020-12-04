@@ -1,0 +1,71 @@
+<%- include("partials/header") %>
+
+<style>
+    
+td{
+  height: 30px;
+  width: 500px;
+  padding: 10px;
+
+}
+.bod
+    {
+      margin-top: 50px;
+      margin: 0 auto;
+    }
+.css{
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.btn{
+  margin-left: 4px;
+}
+
+</style>
+
+<div class="container">
+
+    <div class="jumbotron">
+        <h1> This is an assignment for Go Gaga</h1>
+        <hr>
+        <p>welcome to the index page</p>
+
+      <form action="/users" method="GET" class="form-inline">
+      <div class="form-group">
+        <input type="text" name="search" id="" class="form-control" placeholder="Users search">
+        <input type="submit" class="btn btn btn-outline-dark" value="search">
+      </div>
+      </form>
+
+
+    </div>
+    
+
+<div class="container">
+
+
+    <div  class="bod">
+    
+        <table   >
+          <thead>
+            <td class="css">Name</td>
+            <td class="css">location</td>
+      
+          </thead>
+          <tbody>
+            <% for(var i=0;i<user.length;i++){%>
+            <tr>
+              
+              <td>    <%=user[i].name%> </td>
+              <td>     <%=user[i].location%></td>
+           
+             </tr>
+             <%}%>
+          </tbody>
+        </table>
+    
+     </div>
+    </div>
+    
+    
