@@ -4,9 +4,10 @@ const bodyparser=require('body-parser');
 const usersroutes=require('./routes/users');
 const app=express();
 
+const url=process.env.MONGO_URL || "mongodb://localhost/gogaga"
 
 app.set("view engine","ejs");
-mongoose.connect("mongodb://localhost:27017/gogaga",{useNewUrlParser:true,useUnifiedTopology:true},function(err,db)
+mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true},function(err,db)
 {
     if(err)
     {
