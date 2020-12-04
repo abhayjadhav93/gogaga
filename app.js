@@ -17,6 +17,10 @@ mongoose.connect("mongodb://localhost:27017/gogaga",{useNewUrlParser:true,useUni
     }
 });
 
+app.get("/",function(req,res){
+    res.redirect("/users")
+})
+
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
 
